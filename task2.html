@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>level1</title>
+    <link rel="stylesheet" href="./assist/level1.css">
+    <link rel="stylesheet" href="./assist/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+</head>
+
+<body>
+    <div class="start">
+        <img src="./assist/images/message.svg" alt="">
+        <img src="./assist/images/downloadfile-19.png" alt="">
+        <h1>
+            <div style="direction: rtl;">
+                التمرين الثاني :
+            </div>
+            <br>
+            <div style="direction: rtl;">
+                اسحب وافلت بحيث تشكل الكود التالي :
+            </div>
+            <br>
+            <code id="solve">print("5" )</code>
+        </h1>
+        <div class="close">x</div>
+        <button class="start-btn">
+            ابدأ
+        </button>
+    </div>
+
+    <div class="next">
+        <img src="./assist/images/message.svg" alt="">
+        <img src="./assist/images/131f2c1c-0189-48f2-9b75-12a27d1a3af7-removebg-preview (1).png" alt="">
+        <h1>
+            <div style="direction: rtl; color: #e47f20;" class="text-center fs-1 ">
+                أحسنت يا بطل
+            </div>
+        </h1>
+        <a href="./task3.html" class="start-btn">
+            التمرين التالي
+        </a>
+    </div>
+
+    <div class="error">
+        <img src="./assist/images/message.svg" alt="">
+        <img src="./assist/images/downloadfile-4-removebg-preview.png" alt="">
+        <h1>
+            <div style="direction: rtl" class="mb-3">
+                لقد أخطأت في الترتيب
+                <br>
+                حاول ترتيب الكود بالشكل :
+                <br>
+            </div>
+            <p> print ( " 5 " )</p>
+
+            <div style="direction: rtl" class="mt-3">
+                أو استخدم زر المساعدة
+            </div>
+        </h1>
+        <button class="start-btn" id="complete">
+            أكمل
+        </button>
+    </div>
+
+    <div class="help">
+        <span>print</span>
+        <span>(</span>
+        <span>"</span>
+        <span>5</span>
+        <span>" </span>
+        <span>)</span>
+    </div>
+
+    <button class="hint hvr-float-shadow">مساعدة</button>
+
+
+
+    <img class="img_background" src="./assist/images/photo_2023-03-16_10-21-48.jpg" alt="">
+    <div class="code">
+        <h5 style="direction: rtl">الكود</h5>
+        <code id="code">
+        <!-- print("Ahmad") -->
+        </code>
+        <hr>
+        <div class="value">
+            5
+        </div>
+    </div>
+
+    <div class="drag">
+        <div class="box dotted">
+            <p class="item" draggable="true">print</p>
+        </div>
+        <div class="box dotted">
+            <p class="item" draggable="true">(</p>
+        </div>
+        <div class="box dotted">
+            <p class="item" draggable="true">"</p>
+        </div>
+        <div class="box dotted">
+            <p class="item" draggable="true">أحمد</p>
+        </div>
+        <div class="box dotted">
+            <p class="item" draggable="true">" </p>
+        </div>
+        <div class="box dotted">
+            <p class="item" draggable="true">)</p>
+        </div>
+        <div class="box dotted">
+            <p class="item" draggable="true">5</p>
+        </div>
+    </div>
+    <br>
+    <div class="list">
+        <div class="box dotted"></div>
+        <div class="box dotted"></div>
+        <div class="box dotted"></div>
+        <div class="box dotted"></div>
+        <div class="box dotted"></div>
+        <div class="box dotted"></div>
+    </div>
+
+    <audio src="./assist/music/piglevelwin2mp3-14800.mp3" type="audio/mpeg" class="audio-success"></audio>
+    <audio src="./assist/music/firework-show-short-64657.mp3" type="audio/mpeg" class="audio-fire" loop></audio>
+    <!-- <audio src="./assist/music/wah-wah-sad-trombone-6347.mp3" type="audio/mpeg" class="audio-error"></audio> -->
+
+    <script src="./assist/script.js"></script>
+    <script src="./assist/DragDropTouch.js"></script>
+
+
+</body>
+
+</html>
