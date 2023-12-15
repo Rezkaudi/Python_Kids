@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assest/css/level1.css">
+  <script src="./assest/lib/d3/d3.v7.min.js"></script>
+  <link rel="stylesheet" href="./assest/css/stars.css" />
+  <script src="./assest/js/stars.js"></script>
+  <script src="./assest/js/block.js"></script>
+
+  <title>the map</title>
+  <style>
+    .node {
+      fill: #8AD8DA !important;
+      background-color: #8AD8DA !important;
+      ;
+      stroke: #e47f20;
+      font-size: 30px;
+      font-weight: bolder;
+      color: #e47f20;
+      box-shadow: 0 0 10px #e47f20;
+      transition: r 0.3s;
+
+    }
+
+    .node:hover {
+      r: 40;
+    }
+
+    .link {
+      stroke: #e47f20;
+      stroke-width: 3px;
+
+    }
+
+    .svg {
+      position: absolute;
+      width: 100vw;
+      height: 90%;
+    }
+
+    .node:active {
+      background-color: #0099ff !important;
+    }
+
+    .circ {
+      box-shadow: 0 0 10px orange;
+
+    }
+
+    #off {
+      fill: black !important;
+      background-color: black !important;
+      stroke: red;
+      stroke-width: 3px;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <img class="background" src="./assest/images/background.jpg" alt="">
+
+  <svg class="svg"></svg>
+  <!-- {% if done == 0 %}
+    <script>
+      var a1= null;
+      var a2= null;
+      var a3= null;
+      var a4= null;
+      var a5= null;
+
+    </script>
+
+  {% elif done == 1  %}
+    <script>
+      var a1= "{% url 'task1' %}";
+      var a2= null;
+      var a3= null;
+      var a4= null;
+      var a5= null;
+    </script>
+    {% elif done == 2 %}
+    <script>
+      var a1= "{% url 'task1' %}";
+      var a2= "{% url 'task1' %}";
+      var a3= null;
+      var a4= null;
+      var a5= null;
+
+    </script>
+    {% endif %}
+     -->
+
+  <script>
+    var a1 = "./level3/task1.html";
+    var a2 = "./level3/task2.html";
+    var a3 = null;
+    var a4 = null;
+    var a5 = null;
+
+  </script>
+
+  <!-- (./level2/task1.html)  in all task with change task number -->
+
+  <script src="./assest/js/map3.js"></script>
+</body>
+
+</html>

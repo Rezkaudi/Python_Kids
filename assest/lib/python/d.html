@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <script src="skulpt.min.js" type="text/javascript"></script>
+  <script src="skulpt-stdlib.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <textarea id="code" rows="10" cols="50">print("Hello, Skulpt!")</textarea>
+  <button onclick="runCode()">Run</button>
+  <button onclick="clearOutput()">Clear</button>
+  <pre id="output"></pre>
+
+  <script>
+    function runCode() {
+      const code = document.getElementById("code").value;
+      // const code = "x=0\u000Awhile x<5:\u000A\u0020print(x)\u000A\u0020x+=1"
+      console.log(code)
+      const output = document.getElementById("output");
+      Sk.configure({
+        output: (text) => {
+          output.textContent += text;
+        },
+        read: (filename) => {
+          if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][filename] === undefined)
+            throw `File not found: '${filename}'`;
+          return Sk.builtinFiles["files"][filename];
+        }
+
+      });
+
+      Sk.misceval.asyncToPromise(() => {
+        return Sk.importMainWithBody("<stdin>", false, code, true);
+      }).catch((err) => {
+        output.textContent += err.toString();
+      });
+    }
+    function clearOutput() {
+      const output = document.getElementById("output");
+      output.textContent = "";
+    }
+  </script>
+</body>
+
+</html>

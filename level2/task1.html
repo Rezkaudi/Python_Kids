@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>level 2 task 1</title>
+    <script src="../assest/js/block.js"></script>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assest/css/level2.css">
+    <link rel="stylesheet" href="../assest/css/stars.css" />
+    <script src="../assest/js/stars.js"></script>
+    <style>
+        :root {
+            --task: 1
+        }
+    </style>
+</head>
+
+<body>
+
+    <canvas id="canvas"></canvas>
+    <div class="start">
+        <img src="../assest/images/message.svg" alt="">
+        <img src="../assest/images/intro.png" alt="">
+        <div class="content">
+            <div class="task" style="direction: rtl;">التمرين الأول :</div>
+            <div class="question" style="direction: rtl;">
+                <span style="display: block; padding-bottom: 10px;">
+                    تعليمة ()print تستخدم لطباعة ما بين القوسين على الشاشة
+                </span>
+                <span style="display: block;margin-bottom: 20px;">
+                    نستخدم "" لطباعة اي شيء مكتوب داخلها
+                </span>
+                <span style="background-color: yellow;"> قم بطباعة أي اسم تريد على الشاشة</span>
+                <span> الآن اسحب المربعات الموجودة على اليمين </span>
+                <span>
+                    وضعها في المربعات الموجودة على اليسار بحيث تشكل الكود التالي :
+                </span>
+            </div>
+            <code id="solve">print("غامبول")</code>
+        </div>
+        <!-- <div class="close">x</div> -->
+        <button class="start-btn btn hvr-float-shadow">
+            ابدأ
+        </button>
+    </div>
+
+    <div class="next">
+        <img src="../assest/images/message.svg" alt="">
+        <img src="../assest/images/intro.png" alt="">
+        <div class="content" style="direction: rtl;">
+            <h1>
+                أحسنت يا بطل
+            </h1>
+            <h3 style="direction: rtl;margin-top: 50px;">
+                انت ذكي جدا لقد رتبت الكود بالشكل الصحيح
+            </h3>
+        </div>
+        <div class="to">
+            <a href="./task1.html" class="btn hvr-float-shadow">
+                اعادة مرة اخرى
+            </a>
+            <a href="./task2.html" class="btn hvr-float-shadow">
+                التمرين التالي
+            </a>
+        </div>
+    </div>
+
+    <div class="error">
+        <img src="../assest/images/message.svg" alt="">
+        <img src="../assest/images/sadgmbl.png" alt="">
+        <div class="content">
+            <h3 id="title" style="direction: rtl">
+                لقد أخطأت في الترتيب
+            </h3>
+            <p id="message" style="direction: rtl">
+                حاول ترتيب الكود بالشكل :
+                <br>
+            </p>
+            <code> print ( " غامبول " ) </code>
+
+
+            <div style="direction: rtl;">
+                أو استخدم زر المساعدة
+            </div>
+        </div>
+        <button class="start-btn btn hvr-float-shadow" id="complete">
+            أكمل
+        </button>
+    </div>
+
+    <div class="exercise">
+        <img class="img_background" src="../assest/images/background.jpg" alt="">
+        <div class="coding">
+            <div class="code">
+                <h5 style="direction: rtl">الكود</h5>
+                <code id="code"></code>
+                <button class="btn run">تشغيل</button>
+                <div id="arrow"><img src="../assest/images/run_arrow.png" alt=""></div>
+                <hr>
+                <div id="output" class="value"></div>
+            </div>
+
+            <div class="list" style="margin-top: 50px;">
+                <div class="box dotted" data-a=""></div>
+                <div class="box dotted" data-a=""></div>
+                <div class="box dotted" data-a=""></div>
+                <div class="box dotted" data-a=""></div>
+                <div class="box dotted" data-a=""></div>
+                <div class="box dotted" data-a=""></div>
+            </div>
+        </div>
+        <!-- &#9745; -->
+
+        <div class="drag">
+            <div class="box dotted">
+                <p class="item" draggable="true">print</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">(</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">"</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">غامبول</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">"</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">)</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">داروين</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">أحمد</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">سوريا</p>
+            </div>
+        </div>
+    </div>
+
+    <button class="evaluate btn">تحقق</button>
+    <button class="delete btn">حذف الكل</button>
+    <button class="hint btn hvr-float-shadow">مساعدة</button>
+    <div class="question-hint animate__bounce">
+        <span style="margin-left: 50px">
+            : رتب الكود بالشكل
+        </span>
+        <br><br>
+        <div>print("غامبول")</div>
+    </div>
+
+    <script src="../assest/lib/python/skulpt.min.js" type="text/javascript"></script>
+    <script src="../assest/lib/python/skulpt-stdlib.js" type="text/javascript"></script>
+    <script src="../assest/js/script2.js"></script>
+
+    <!-- <script src="../assest/DragDropTouch.js"></script> -->
+
+</body>
+
+</html>

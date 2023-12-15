@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>level 3 task 4</title>
+    <script src="../assest/js/block.js"></script>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assest/css/level3.css">
+    <link rel="stylesheet" href="../assest/css/stars.css" />
+    <script src="../assest/js/stars.js"></script>
+    <style>
+        :root {
+            --task: 4;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+
+    <div class="start">
+        <img src="../assest/images/message.svg" alt="">
+        <img src="../assest/images/intro.png" alt="">
+        <div class="content">
+            <div class="task" style="direction: rtl;">التمرين الرابع :</div>
+            <div class="question" style="direction: rtl;">
+                <span style="display: block;"> في هذه المرحلة نريد تشكيل الكود بالصيغة التالية</span>
+                <span style="display: block;background-color: yellow;margin-top: 30px;">
+                    اذا كان عمر داروين أكبر من عمر غامبول اطبع (داروين اكبر من غامبول ) و الا اذا كان عمر داروين اصغر من
+                    عمر غامبول اطبع (داروين اصغر من غامبول) والا اطبع اي عبارة تريد
+                </span>
+            </div>
+        </div>
+        <!-- <div class="close">x</div> -->
+        <button class="start-btn btn hvr-float-shadow">
+            ابدأ
+        </button>
+    </div>
+
+    <div class="next">
+        <img src="../assest/images/message.svg" alt="">
+        <img src="../assest/images/intro.png" alt="">
+        <div class="content" style="direction: rtl;">
+            <h1>
+                أحسنت يا بطل
+            </h1>
+            <h3 style="direction: rtl;margin-top: 50px;">
+                انت ذكي جدا لقد منعت الغيمة من ازعاج غامبول وحسبت مساحة المستطيل بشكل صحيح
+            </h3>
+        </div>
+        <div class="to">
+            <a href="./task4.html" class="btn hvr-float-shadow">
+                اعادة مرة اخرى
+            </a>
+            <a href="./task5.html" class="btn hvr-float-shadow">
+                التمرين التالي
+            </a>
+        </div>
+    </div>
+
+    <div class="error">
+        <img src="../assest/images/message.svg" alt="">
+        <img src="../assest/images/sadgmbl.png" alt="">
+        <div class="content">
+            <h3 style="direction: rtl">
+                اوو لقد أخطأت
+            </h3>
+            <p style="direction: rtl" id="message">
+                حاول ترتيب الكود بالشكل :
+            </p>
+        </div>
+        <button class="start-btn btn hvr-float-shadow" id="complete">
+            أكمل
+        </button>
+    </div>
+
+
+    <!-- <div class="help">
+        <button class="start-btn btn hvr-float-shadow" id="complete">
+            أكمل
+        </button>
+    </div>
+    <button class="hint btn hvr-float-shadow">مساعدة</button> -->
+
+
+    <div class="background"><img src="../assest/images/background.jpg" alt=""></div>
+
+    <div class="container">
+        <div class="left">
+            <div class="coding" style="height: 80%;">
+                <div class="title">الكود</div>
+                <span class="code">
+                    <span class="row_num">1</span>
+                    <span class="var">darwen_age</span>
+                    <span class="signal"> = </span>
+                    <input type="text" value="">
+                </span>
+                <span class="comment" style="font-size: 15px;">
+                    # عمر داروين
+                </span>
+
+                <br><br>
+                <!-- ------------------------------------------->
+                <span class="code">
+                    <span class="row_num">2</span>
+                    <span class="var">gambal_age</span>
+                    <span class="signal"> = </span>
+                    <input type="text" value="">
+                </span>
+                <span class="comment" style="font-size: 15px;">
+                    # عمر غامبول
+                </span>
+
+                <br><br>
+                <!-- ------------------------------------------->
+                <span class="code">
+                    <span class="row_num">3</span>
+                    <span class="syntax">if</span>
+                    <span class="var"> darwen_age </span>
+                    <input type="text" class="signal" value="">
+                    <span class="var">gambal_age</span>
+                    <span class="signal">:</span>
+                </span>
+
+                <br><br>
+                <!-- ------------------------------------------->
+                <span class="code">
+                    <span class="row_num">4</span>
+                    <span>&emsp;</span>
+                    <span>&emsp;</span>
+                    <span>&emsp;</span>
+                    <span class="syntax">print</span>
+                    <span class="signal">(</span>
+                    <span class="string">"داروين اكبر من غامبول"</span>
+                    <span class="signal">)</span>
+                </span>
+                <!-- ------------------------------------------->
+                <br><br>
+                <span class="code">
+                    <span class="row_num">5</span>
+                    <span class="syntax">elif</span>
+                    <span class="var"> darwen_age </span>
+                    <input type="text" class="signal" value="">
+                    <span class="var">gambal_age</span>
+                    <span class="signal">:</span>
+                </span>
+                <!-- ------------------------------------------->
+                <br><br>
+                <span class="code">
+                    <span class="row_num">6</span>
+                    <span>&emsp;</span>
+                    <span>&emsp;</span>
+                    <span>&emsp;</span>
+                    <span class="syntax">print</span>
+                    <span class="signal">(</span>
+                    <span class="string">"داروين اصغر من غامبول"</span>
+                    <span class="signal">)</span>
+                </span>
+
+                <!-- ------------------------------------------->
+                <br><br>
+                <span class="code">
+                    <span class="row_num">7</span>
+                    <span class="syntax">else</span>
+                    <span class="signal">:</span>
+                </span>
+                <!-- ------------------------------------------->
+                <br><br>
+                <span class="code">
+                    <span class="row_num">8</span>
+                    <span>&emsp;</span>
+                    <span>&emsp;</span>
+                    <span>&emsp;</span>
+                    <span class="syntax">print</span>
+                    <span class="signal">("</span>
+                    <input type="text" class="string" value="" style="width:300px;">
+                    <span class="signal">")</span>
+                </span>
+
+            </div>
+
+            <div class="control">
+                <button class="btn reset hvr-float-shadow">مسح</button>
+                <button class="btn run hvr-float-shadow">تحقق</button>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="up"></div>
+            <div class="down">
+                <div class="compute">
+                    <div class="title">الخرج</div>
+                    <pre class="result"></pre>
+                </div>
+                <img src="../assest/images/intro.png" alt="">
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="../assest/lib/python/skulpt.min.js" type="text/javascript"></script>
+    <script src="../assest/lib/python/skulpt-stdlib.js" type="text/javascript"></script>
+
+    <script src="../assest/js/script3.js"></script>
+</body>
+
+</html>

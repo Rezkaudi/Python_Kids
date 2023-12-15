@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>level 3 task 2</title>
+    <script src="../assest/js/block.js"></script>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assest/css/level3.css">
+    <link rel="stylesheet" href="../assest/css/stars.css" />
+    <script src="../assest/js/stars.js"></script>
+    <style>
+        :root {
+            --task: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+
+    <div class="start">
+        <img src="../assest/images/message.svg" alt="">
+        <img src="../assest/images/intro.png" alt="">
+        <div class="content">
+            <div class="task" style="direction: rtl;">التمرين الثاني :</div>
+            <div class="question" style="direction: rtl;">
+                <span style="display: block;"> نفس المرحلة السابقة ولكن هذه المرة دائرة</span>
+                <span style="display: block;background-color: yellow;margin-top: 30px;">
+                    لدينا دائرة ونريد حبس الغيمة فيه لأنها تزعج غامبول
+                </span>
+                <span>
+                    اختر نصف قطر مناسب لهذه الدائرة واحسب مساحتها ثم اطبع النتيجة على الشاشة
+                </span>
+            </div>
+        </div>
+        <!-- <div class="close">x</div> -->
+        <button class="start-btn btn hvr-float-shadow">
+            ابدأ
+        </button>
+    </div>
+
+    <div class="next">
+        <img src="../assest/images/message.svg" alt="">
+        <img src="../assest/images/intro.png" alt="">
+        <div class="content" style="direction: rtl;">
+            <h1>
+                أحسنت يا بطل
+            </h1>
+            <h3 style="direction: rtl;margin-top: 50px;">
+                انت ذكي جدا لقد منعت الغيمة من ازعاج غامبول وحسبت مساحة الدائرة بشكل صحيح
+            </h3>
+        </div>
+        <div class="to">
+            <a href="./task2.html" class="btn hvr-float-shadow">
+                اعادة مرة اخرى
+            </a>
+            <a href="./task3.html" class="btn hvr-float-shadow">
+                التمرين التالي
+            </a>
+        </div>
+    </div>
+
+    <div class="error">
+        <img src="../assest/images/message.svg" alt="">
+        <img src="../assest/images/sadgmbl.png" alt="">
+        <div class="content">
+            <h3 style="direction: rtl">
+                اوو لقد أخطأت
+            </h3>
+            <p style="direction: rtl" id="message">
+                حاول ترتيب الكود بالشكل :
+            </p>
+        </div>
+        <button class="start-btn btn hvr-float-shadow" id="complete">
+            أكمل
+        </button>
+    </div>
+
+
+    <!-- <div class="help">
+        <button class="start-btn btn hvr-float-shadow" id="complete">
+            أكمل
+        </button>
+    </div>
+    <button class="hint btn hvr-float-shadow">مساعدة</button> -->
+
+
+    <div class="background"><img src="../assest/images/background.jpg" alt=""></div>
+
+    <div class="container">
+        <div class="left">
+            <div class="coding">
+                <div class="title">الكود</div>
+                <span class="code">
+                    <span class="row_num">1</span>
+                    <span class="var">r</span>
+                    <span class="signal"> = </span>
+                    <input type="text" value="">
+                </span>
+                <span class="comment" style="font-size: 10px;">
+                    # نصف قطر الدائرة
+                </span>
+
+                <br><br>
+                <!-- ------------------------------------------->
+                <span class="code">
+                    <span class="row_num">2</span>
+                    <span class="var">area</span>
+                    <span class="signal"> = </span>
+                    <span class="var">r</span>
+                    <input type="text" class="signal" value="">
+                    <span class="var">3.14</span>
+                </span>
+                <span class="comment" style="font-size: 10px;">
+                    # مساحة الدائرة تساوي نصف القطر ضرب 3.14
+                </span>
+
+                <br><br>
+                <!-- ------------------------------------------->
+                <span class="code">
+                    <span class="row_num">3</span>
+                    <span class="syntax">print</span>
+                    <span class="signal">(</span>
+                    <span class="string">" مساحة الدائرة تساوي"</span>
+                    <span class="signal">)</span>
+                </span>
+                <span class="comment" style="font-size: 10px;">
+                    # طباعة مساحة الدائرة
+                </span>
+
+                <!-- ------------------------------------------->
+                <br><br>
+                <span class="code">
+                    <span class="row_num">4</span>
+                    <span class="syntax">print</span>
+                    <span class="signal">(</span>
+                    <input type="text" class="var" value="">
+                    <span class="signal">)</span>
+                </span>
+                <span class="comment" style="font-size: 10px;">
+                    # طباعة مساحة الدائرة
+                </span>
+
+            </div>
+
+            <div class="control">
+                <button class="btn reset hvr-float-shadow">مسح</button>
+                <button class="btn run hvr-float-shadow">تحقق</button>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="up">
+                <img src="../assest/images/gface.png" style="margin-left: -160px;" alt="">
+                <!-- <img src="../assest/images/dface.png" alt="" style="right: 250px;"> -->
+                <img src="../assest/images/Inkedcloud.png" style="top: 130px;right: 150px;" alt="">
+                <div class="figure" style=" border-radius: 50%;top:0px;"></div>
+            </div>
+            <div class="down">
+                <div class="compute">
+                    <div class="title">الخرج</div>
+                    <pre class="result"></pre>
+                </div>
+                <img src="../assest/images/intro.png" alt="">
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="../assest/lib/python/skulpt.min.js" type="text/javascript"></script>
+    <script src="../assest/lib/python/skulpt-stdlib.js" type="text/javascript"></script>
+
+    <script src="../assest/js/script3.js"></script>
+</body>
+
+</html>

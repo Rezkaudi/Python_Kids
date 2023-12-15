@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <title>level 1 task 10</title>
+    <script src="../assest/js/block.js"></script>
+    <link rel="stylesheet" href="../assest/css/level1.css">
+    <link rel="stylesheet" href="../assest/css/stars.css" />
+    <script src="../assest/js/stars.js"></script>
+
+    <style>
+        :root {
+            --task: 10;
+            --num_of_movment: 4;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+
+    <div class="start">
+        <img src="../assest/images/message.svg" alt="">
+        <img src="../assest/images/intro.png" alt="">
+        <h1>
+            <div style="direction: rtl; font-size: 20px;">
+                أحسنت صنعا بتجاوز المرحلة التاسعة
+                <br>
+                أنت ذكي جدا
+                <br>
+                <br>
+                اكمل بنفس الطريقة
+                <br>
+                يجب عليك استخدام زر الشرط عند الوصول الى الغيمة
+                <br>
+                لاختصار الحل
+                <br>
+                <br>
+                هل تستطيع ذلك ؟؟
+            </div>
+        </h1>
+        <div class="close">x</div>
+        <button class="start-btn btn">
+            ابدأ
+        </button>
+    </div>
+
+    <div class="next">
+        <div class="cont animate__backInDown">
+            <h1>مرحى لقد ربحت </h1>
+            <h3>أحسنت </h3>
+            <div class="rate">
+                <svg height="50px" width="50px" class="animate__tada" style="--d:2s">
+                    <path
+                        d="M26.285,2.486l5.407,10.956c0.376,0.762,1.103,1.29,1.944,1.412l12.091,1.757c2.118,0.308,2.963,2.91,1.431,4.403l-8.749,8.528c-0.608,0.593-0.886,1.448-0.742,2.285l2.065,12.042c0.362,2.109-1.852,3.717-3.746,2.722l-10.814-5.685c-0.752-0.395-1.651-0.395-2.403,0l-10.814,5.685c-1.894,0.996-4.108-0.613-3.746-2.722l2.065-12.042c0.144-0.837-0.134-1.692-0.742-2.285l-8.749-8.528c-1.532-1.494-0.687-4.096,1.431-4.403l12.091-1.757c0.841-0.122,1.568-0.65,1.944-1.412l5.407-10.956C22.602,0.567,25.338,0.567,26.285,2.486z" />
+                </svg>
+
+                <svg height="50px" width="50px" class="animate__tada" style="--d:4s">
+                    <path
+                        d="M26.285,2.486l5.407,10.956c0.376,0.762,1.103,1.29,1.944,1.412l12.091,1.757c2.118,0.308,2.963,2.91,1.431,4.403l-8.749,8.528c-0.608,0.593-0.886,1.448-0.742,2.285l2.065,12.042c0.362,2.109-1.852,3.717-3.746,2.722l-10.814-5.685c-0.752-0.395-1.651-0.395-2.403,0l-10.814,5.685c-1.894,0.996-4.108-0.613-3.746-2.722l2.065-12.042c0.144-0.837-0.134-1.692-0.742-2.285l-8.749-8.528c-1.532-1.494-0.687-4.096,1.431-4.403l12.091-1.757c0.841-0.122,1.568-0.65,1.944-1.412l5.407-10.956C22.602,0.567,25.338,0.567,26.285,2.486z" />
+                </svg>
+
+                <svg height="50px" width="50px" class="animate__tada" style="--d:6s">
+                    <path
+                        d="M26.285,2.486l5.407,10.956c0.376,0.762,1.103,1.29,1.944,1.412l12.091,1.757c2.118,0.308,2.963,2.91,1.431,4.403l-8.749,8.528c-0.608,0.593-0.886,1.448-0.742,2.285l2.065,12.042c0.362,2.109-1.852,3.717-3.746,2.722l-10.814-5.685c-0.752-0.395-1.651-0.395-2.403,0l-10.814,5.685c-1.894,0.996-4.108-0.613-3.746-2.722l2.065-12.042c0.144-0.837-0.134-1.692-0.742-2.285l-8.749-8.528c-1.532-1.494-0.687-4.096,1.431-4.403l12.091-1.757c0.841-0.122,1.568-0.65,1.944-1.412l5.407-10.956C22.602,0.567,25.338,0.567,26.285,2.486z" />
+                </svg>
+            </div>
+            <div class="what_next">
+                <img src="../assest/images/gd2.png" alt="">
+                <div class="to">
+                    <button onclick="moveto(score)" class="btn">
+                        التمرين التالي
+                    </button>
+
+                    <a href="./task10.html" class="btn">
+                        اعادة مرة أخرى
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="error">
+        <img src="../assest/images/message.svg" alt="">
+        <img src="../assest/images/sadgmbl.png" alt="">
+        <h1 style="direction: rtl; font-size: 30px;">
+            اووو لقد أخطأت
+        </h1>
+        <h2 class="message" style="direction: rtl; font-size: 20px;"></h2>
+        <div class="complete">
+            <button class="btn replay" id="replay">
+                حاول مرة أخرى
+            </button>
+
+            <!-- <button class="btn get_solution" id="get_solution">
+                الحصول على الحل
+            </button> -->
+        </div>
+    </div>
+
+    <div class="hint animate__bounce">
+        استخدم زر الشرط لايصال غامبول الى داروين
+    </div>
+
+
+    <img class="background" src="../assest/images/background.jpg" alt="">
+
+    <div class="taskcontent">
+        <div class="control" id="control">
+            <img class="left control_item" id="left" src="../assest/images/arrow.png" alt="">
+            <img class="up control_item" id="up" src="../assest/images/arrow.png" alt="">
+            <img class="right control_item" id="right" src="../assest/images/arrow.png" alt="">
+            <img class="down control_item" id="down" src="../assest/images/arrow.png" alt="">
+        </div>
+
+        <div class="control_adv">
+            <!-- <div class="while">
+                <button class="btn_add">add</button>
+                <div class="while_cont">
+                    while
+                    <select name="while" id="while">
+                        <option value="left"><span>&larr;</span></option>
+                        <option value="up"><span>&uarr;</span></option>
+                        <option value="right"><span>&rarr;</span></option>
+                        <option value="down"><span>&darr;</span></option>
+                    </select>
+                    :
+                    <div class="selected"><span>&larr;</span></div>
+                </div>
+            </div> -->
+
+            <div class="if">
+                <button class="btn_add control_item" id="if">اضافة</button>
+                <div class="if_cont">
+                    if
+                    <select name="if" id="if">
+                        <option value="left"><span>&larr;</span></option>
+                        <option value="up"><span>&uarr;</span></option>
+                        <option value="right"><span>&rarr;</span></option>
+                        <option value="down"><span>&darr;</span></option>
+                    </select>
+                    :
+                    <div class="selected"></div>
+                </div>
+            </div>
+
+            <!-- <div class="iw">while <span>&larr;</span> : <span>&larr;</span></div> -->
+        </div>
+
+        <div class="grid">
+            <div class="place"></div>
+            <div class="place"></div>
+            <div class="place"></div>
+            <div class="place"></div>
+            <div class="place"></div>
+            <div class="place"></div>
+            <div class="place"></div>
+            <div class="place"></div>
+            <div class="place"></div>
+            <div class="place"></div>
+            <div class="place"></div>
+            <div class="place"></div>
+            <div class="place"></div>
+            <div class="place"></div>
+            <div class="place"></div>
+            <div class="place"></div>
+        </div>
+
+        <button class="evaluate">تحقق</button>
+        <button class="reset">مسح الكل</button>
+
+    </div>
+
+    <div class="do"></div>
+
+
+    <script>
+        let score = 0;
+    </script>
+    <script src="../assest/js/script1.js"></script>
+    <script>
+        let moveto = (s) => {
+            const form = document.createElement('form')
+            // form.method = 'post'
+            window.location.href = '/level1/task11.html'
+            // form.action = './task2.html'
+
+            const star_input = document.createElement('input')
+            star_input.type = 'hidden'
+            star_input.name = 'stars'
+            star_input.value = s
+
+
+            form.appendChild(star_input)
+            document.body.appendChild(form)
+
+            // form.submit()
+        }
+    </script>
+</body>
+
+</html>

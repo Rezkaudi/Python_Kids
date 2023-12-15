@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>level 2 task 8</title>
+    <script src="../assest/js/block.js"></script>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assest/css/level2.css">
+    <link rel="stylesheet" href="../assest/css/stars.css" />
+    <script src="../assest/js/stars.js"></script>
+    <style>
+        :root {
+            --task: 8;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <div class="start">
+        <img src="../assest/images/message.svg" alt="">
+        <img src="../assest/images/intro.png" alt="">
+        <div class="content">
+            <div class="task" style="direction: rtl;">التمرين الثامنة :</div>
+            <div class="question" style="direction: rtl;">
+                <span style="padding-bottom: 10px;">
+                    نفس المرحلة السابقة ولكن هنا سوف نستخدم else
+                </span>
+                <span style="display: block;">
+                    تستخدم else مع if للتعبير عن شرط معين مثل :
+                </span>
+                <span style="display: block;">
+                    اذا تحقق شرط افعل شيء والا افعل شيء آخر
+                </span>
+
+                <span style="background-color: yellow;">
+                    الأن لدينا المتغير x يدل على درجة غامبول في الامتحان اذا x أكبر من 8 اطبع ممتاز والا اطبع جيد
+                </span>
+            </div>
+            <code
+                style="margin-left: 110px;margin-top: 0px;">x=10 <br />if x>8 : <br /> &emsp; print("ممتاز") <br /> else : <br /> &emsp; print("جيد")</code>
+
+        </div>
+        <!-- <div class="close">x</div> -->
+        <button class="start-btn btn hvr-float-shadow">
+            ابدأ
+        </button>
+    </div>
+
+    <div class="next">
+        <img src="../assest/images/message.svg" alt="">
+        <img src="../assest/images/intro.png" alt="">
+        <div class="content" style="direction: rtl;">
+            <h1>
+                أحسنت يا بطل
+            </h1>
+            <h3 style="direction: rtl;margin-top: 50px;">
+                انت ذكي جدا لقد رتبت الكود بالشكل الصحيح
+            </h3>
+        </div>
+        <div class="to">
+            <a href="./task8.html" class="btn hvr-float-shadow">
+                اعادة مرة اخرى
+            </a>
+            <a href="./task9.html" class="btn hvr-float-shadow">
+                التمرين التالي
+            </a>
+        </div>
+    </div>
+
+    <div class="error">
+        <img src="../assest/images/message.svg" alt="">
+        <img src="../assest/images/sadgmbl.png" alt="">
+        <div class="content">
+            <h3 id="title" style="direction: rtl">
+                لقد أخطأت في الترتيب
+            </h3>
+            <p id="message" style="direction: rtl">
+                حاول ترتيب الكود بالشكل :
+                <br>
+            </p>
+            <code>x=10 <br />if x>8 : <br /> &emsp; print("ممتاز") <br /> else : <br /> &emsp; print("جيد")</code>
+        </div>
+        <button class="start-btn btn hvr-float-shadow" id="complete">
+            أكمل
+        </button>
+    </div>
+
+    <div class="exercise">
+        <img class="img_background" src="../assest/images/background.jpg" alt="">
+        <div class="coding">
+            <div class="code" style="margin-bottom: -60px;">
+                <h5 style="direction: rtl">الكود</h5>
+                <code id="code"></code>
+                <button class="btn run">تشغيل</button>
+                <div id="arrow"><img src="../assest/images/run_arrow.png" alt=""></div>
+                <hr>
+                <div id="output" class="value"></div>
+            </div>
+
+            <div class="list">
+                <div class="box dotted" data-a=""></div>
+                <div class="box dotted" data-a=""></div>
+                <div class="box dotted" data-a=""></div>
+            </div>
+
+            <div class="list">
+                <div class="box dotted" data-a=""></div>
+                <div class="box dotted" data-a=""></div>
+                <div class="box dotted" data-a=""></div>
+                <div class="box dotted" data-a=""></div>
+                <div class="box dotted" data-a=""></div>
+            </div>
+
+            <div class="list">
+                <span>&emsp;</span>
+                <span>&emsp;</span>
+                <span>&emsp;</span>
+                <span>&emsp;</span>
+                <span>&emsp;</span>
+                <div class="box dotted" data-a=""></div>
+                <div class="box dotted" data-a=""></div>
+                <div class="box dotted" data-a=""></div>
+                <div class="box dotted" data-a=""></div>
+            </div>
+            <div class="list">
+                <div class="box dotted" data-a=""></div>
+                <div class="box dotted" data-a=""></div>
+            </div>
+            <div class="list">
+                <span>&emsp;</span>
+                <span>&emsp;</span>
+                <span>&emsp;</span>
+                <span>&emsp;</span>
+                <span>&emsp;</span>
+                <div class="box dotted" data-a=""></div>
+                <div class="box dotted" data-a=""></div>
+                <div class="box dotted" data-a=""></div>
+                <div class="box dotted" data-a=""></div>
+            </div>
+        </div>
+
+        <div class="drag">
+            <div class="box dotted">
+                <p class="item" draggable="true">x</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">=</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">10</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">if</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">x</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">&lt;</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">&gt;</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">8</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">:</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">print</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">(</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">"ممتاز"</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">)</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">else</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">:</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">print</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">(</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">"جيد"</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">)</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">"ضعيف"</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">4</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">==</p>
+            </div>
+        </div>
+    </div>
+
+    <button class="evaluate btn">تحقق</button>
+    <button class="delete btn">حذف الكل</button>
+    <button class="hint btn hvr-float-shadow">مساعدة</button>
+    <div class="question-hint animate__bounce">
+        <span style="margin-left: 50px;">
+            رتب الكود بالشكل
+        </span>
+        <br /><br />
+        <div>x=10 <br />if x>8 : <br /> &emsp; print("ممتاز") <br /> else : <br /> &emsp; print("جيد")</div>
+
+    </div>
+
+
+    <script src="../assest/lib/python/skulpt.min.js" type="text/javascript"></script>
+    <script src="../assest/lib/python/skulpt-stdlib.js" type="text/javascript"></script>
+    <script src="../assest/js/script2.js"></script>
+    <!-- <script src="../assest/DragDropTouch.js"></script> -->
+
+</body>
+
+</html>

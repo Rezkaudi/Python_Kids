@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>level 3 task 1</title>
+    <script src="../assest/js/block.js"></script>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assest/css/level3.css">
+    <link rel="stylesheet" href="../assest/css/stars.css" />
+    <script src="../assest/js/stars.js"></script>
+    <style>
+        :root {
+            --task: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <div class="start">
+        <img src="../assest/images/message.svg" alt="">
+        <img src="../assest/images/intro.png" alt="">
+        <div class="content">
+            <div class="task" style="direction: rtl;">التمرين الأول :</div>
+            <div class="question" style="direction: rtl;">
+                <span style="display: block;"> املأ الفراغات الناقصة في الكود الموجود على اليسار</span>
+                <span style="display: block;background-color: yellow;margin-top: 30px;">
+                    لدينا مستطيل ونريد حبس الغيمة فيه لأنها تزعج غامبول
+                </span>
+                <span>
+                    اختر طول وعرض مناسبين لهذا المستطيل واحسب مساحته ثم اطبع النتيجة على الشاشة
+                </span>
+            </div>
+        </div>
+        <!-- <div class="close">x</div> -->
+        <button class="start-btn btn hvr-float-shadow">
+            ابدأ
+        </button>
+    </div>
+
+    <div class="next">
+        <img src="../assest/images/message.svg" alt="">
+        <img src="../assest/images/intro.png" alt="">
+        <div class="content" style="direction: rtl;">
+            <h1>
+                أحسنت يا بطل
+            </h1>
+            <h3 style="direction: rtl;margin-top: 50px;">
+                انت ذكي جدا لقد منعت الغيمة من ازعاج غامبول وحسبت مساحة المستطيل بشكل صحيح
+            </h3>
+        </div>
+        <div class="to">
+            <a href="./task1.html" class="btn hvr-float-shadow">
+                اعادة مرة اخرى
+            </a>
+            <a href="./task2.html" class="btn hvr-float-shadow">
+                التمرين التالي
+            </a>
+        </div>
+    </div>
+
+    <div class="error">
+        <img src="../assest/images/message.svg" alt="">
+        <img src="../assest/images/sadgmbl.png" alt="">
+        <div class="content">
+            <h3 style="direction: rtl">
+                اوو لقد أخطأت
+            </h3>
+            <p style="direction: rtl" id="message">
+                حاول ترتيب الكود بالشكل :
+            </p>
+        </div>
+        <button class="start-btn btn hvr-float-shadow" id="complete">
+            أكمل
+        </button>
+    </div>
+
+    <!-- <div class="help">
+        <button class="start-btn btn hvr-float-shadow" id="complete">
+            أكمل
+        </button>
+    </div>
+    <button class="hint btn hvr-float-shadow">مساعدة</button> -->
+
+
+    <div class="background"><img src="../assest/images/background.jpg" alt=""></div>
+    <div class="container">
+        <div class="left">
+            <div class="coding">
+                <div class="title">الكود</div>
+                <span class="code">
+                    <span class="row_num">1</span>
+                    <span class="var">length</span>
+                    <span class="signal"> = </span>
+                    <input type="text" value="">
+                </span>
+                <span class="comment" style="font-size: 10px;">
+                    # طول المستطيل
+                </span>
+
+                <br><br>
+                <!-- ------------------------------------------->
+                <span class="code">
+                    <span class="row_num">2</span>
+                    <span class="var">width</span>
+                    <span class="signal"> = </span>
+                    <input type="text" value="">
+                </span>
+                <span class="comment" style="font-size: 10px;">
+                    # عرض المستطيل
+                </span>
+
+                <br><br>
+                <!-- ------------------------------------------->
+                <span class="code">
+                    <span class="row_num">3</span>
+                    <span class="var">area</span>
+                    <span class="signal"> = </span>
+                    <span class="var">length</span>
+                    <input type="text" class="signal" value="">
+                    <span class="var">width</span>
+                </span>
+                <span class="comment" style="font-size: 10px;">
+                    # مساحة المستطيل = الطول ضرب العرض
+                </span>
+
+                <br><br>
+                <!-- ------------------------------------------->
+                <span class="code">
+                    <span class="row_num">4</span>
+                    <span class="syntax">print</span>
+                    <span class="signal">(</span>
+                    <span class="string">" مساحة المستطيل تساوي"</span>
+                    <span class="signal">)</span>
+                </span>
+                <span class="comment" style="font-size: 10px;">
+                    # طباعة مساحة المستطيل
+                </span>
+
+                <!-- ------------------------------------------->
+                <br><br>
+                <span class="code">
+                    <span class="row_num">5</span>
+                    <span class="syntax">print</span>
+                    <span class="signal">(</span>
+                    <input type="text" class="var" value="">
+                    <span class="signal">)</span>
+                </span>
+                <span class="comment" style="font-size: 10px;">
+                    # طباعة مساحة المستطيل
+                </span>
+
+            </div>
+
+            <div class="control">
+                <button class="btn reset hvr-float-shadow">مسح</button>
+                <button class="btn run hvr-float-shadow">تحقق</button>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="up">
+                <img src="../assest/images/gface.png" alt="">
+                <img src="../assest/images/dface.png" alt="">
+                <img src="../assest/images/Inkedcloud.png" alt="">
+                <div class="figure"></div>
+            </div>
+            <div class="down">
+                <div class="compute">
+                    <div class="title">الخرج</div>
+                    <pre class="result"></pre>
+                </div>
+                <img src="../assest/images/intro.png" alt="">
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="../assest/lib/python/skulpt.min.js" type="text/javascript"></script>
+    <script src="../assest/lib/python/skulpt-stdlib.js" type="text/javascript"></script>
+
+    <script src="../assest/js/script3.js"></script>
+</body>
+
+</html>

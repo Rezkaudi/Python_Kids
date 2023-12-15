@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>level 2 task 6</title>
+    <script src="../assest/js/block.js"></script>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assest/css/level2.css">
+    <link rel="stylesheet" href="../assest/css/stars.css" />
+    <script src="../assest/js/stars.js"></script>
+    <style>
+        :root {
+            --task: 6;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+
+    <div class="start">
+        <img src="../assest/images/message.svg" alt="">
+        <img src="../assest/images/intro.png" alt="">
+        <div class="content">
+            <div class="task" style="direction: rtl;">التمرين السادس :</div>
+            <div class="question" style="direction: rtl;">
+                <span style="display: block; padding-bottom: 10px; background-color: yellow; width: fit-content;">
+                    في هذه المرحلة نريد التعديل على قيمة متغير ببعض العمليات الحسابية
+                </span>
+                <span style="display: block;margin-bottom: 20px;">
+                    أي يتم اجراء عمليات حسابية على القيمة السابقة للمتغير x
+                </span>
+                <span>انظر للشكل التالي :</span>
+            </div>
+            <code style="margin-left: 110px;">x=5 <br /> x+=1 <br /> print(x)</code>
+        </div>
+        <!-- <div class="close">x</div> -->
+        <button class="start-btn btn hvr-float-shadow">
+            ابدأ
+        </button>
+    </div>
+
+    <div class="next">
+        <img src="../assest/images/message.svg" alt="">
+        <img src="../assest/images/intro.png" alt="">
+        <div class="content" style="direction: rtl;">
+            <h1>
+                أحسنت يا بطل
+            </h1>
+            <h3 style="direction: rtl;margin-top: 50px;">
+                انت ذكي جدا لقد رتبت الكود بالشكل الصحيح
+            </h3>
+        </div>
+        <div class="to">
+            <a href="./task6.html" class="btn hvr-float-shadow">
+                اعادة مرة اخرى
+            </a>
+            <a href="./task7.html" class="btn hvr-float-shadow">
+                التمرين التالي
+            </a>
+        </div>
+    </div>
+
+    <div class="error">
+        <img src="../assest/images/message.svg" alt="">
+        <img src="../assest/images/sadgmbl.png" alt="">
+        <div class="content">
+            <h3 id="title" style="direction: rtl">
+                لقد أخطأت في الترتيب
+            </h3>
+            <p id="message" style="direction: rtl">
+                حاول ترتيب الكود بالشكل :
+                <br>
+            </p>
+            <code>x=5 <br /> x+=1 <br /> print(x)</code>
+
+
+            <div style="direction: rtl;">
+                أو استخدم زر المساعدة
+            </div>
+        </div>
+        <button class="start-btn btn hvr-float-shadow" id="complete">
+            أكمل
+        </button>
+    </div>
+
+
+    <div class="exercise">
+        <img class="img_background" src="../assest/images/background.jpg" alt="">
+        <div class="coding">
+            <div class="code">
+                <h5 style="direction: rtl">الكود</h5>
+                <code id="code"></code>
+                <button class="btn run">تشغيل</button>
+                <div id="arrow"><img src="../assest/images/run_arrow.png" alt=""></div>
+                <hr>
+                <div id="output" class="value"></div>
+            </div>
+
+            <div class="list">
+                <div class="box dotted" data-a=""></div>
+                <div class="box dotted" data-a=""></div>
+                <div class="box dotted" data-a=""></div>
+            </div>
+
+            <div class="list">
+                <div class="box dotted" data-a=""></div>
+                <div class="box dotted" data-a=""></div>
+                <div class="box dotted" data-a=""></div>
+            </div>
+
+            <div class="list">
+                <div class="box dotted" data-a=""></div>
+                <div class="box dotted" data-a=""></div>
+                <div class="box dotted" data-a=""></div>
+                <div class="box dotted" data-a=""></div>
+            </div>
+        </div>
+
+        <div class="drag">
+            <div class="box dotted">
+                <p class="item" draggable="true">x</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">=</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">5</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">x</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">+=</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">*=</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">-=</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">/=</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">1</p>
+            </div>
+
+            <div class="box dotted">
+                <p class="item" draggable="true">print</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">(</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">x</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">)</p>
+            </div>
+            <div class="box dotted">
+                <p class="item" draggable="true">7</p>
+            </div>
+
+        </div>
+    </div>
+
+    <button class="evaluate btn">تحقق</button>
+    <button class="delete btn">حذف الكل</button>
+    <button class="hint btn hvr-float-shadow">مساعدة</button>
+    <div class="question-hint animate__bounce">
+        <span style="margin-left: 50px;">
+            رتب الكود بالشكل
+        </span>
+        <br /><br />
+        <div>x=5 <br /> x+=1 <br /> print(x)</div>
+    </div>
+
+
+    <script src="../assest/lib/python/skulpt.min.js" type="text/javascript"></script>
+    <script src="../assest/lib/python/skulpt-stdlib.js" type="text/javascript"></script>
+    <script src="../assest/js/script2.js"></script>
+    <!-- <script src="../assest/DragDropTouch.js"></script> -->
+
+</body>
+
+</html>

@@ -1,134 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>level1</title>
-    <link rel="stylesheet" href="./assist/level1.css">
-    <link rel="stylesheet" href="./assist/lib/bootstrap/dist/css/bootstrap.min.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Rezk Audi">
+  <title>level</title>
+
+  <link rel="stylesheet" href="./assest/lib/bootstrap/bootstrap.min.css" />
+  <!-- <link rel="stylesheet" href="css/all.min.css" /> -->
+  <link rel="stylesheet" href="./assest/css/level.css" />
+
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iyhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="./assest/css/stars.css" />
+  <script src="./assest/js/stars.js"></script>
+  <script src="./assest/js/block.js"></script>
 
 </head>
 
 <body>
-    <div class="start">
-        <img src="./assist/images/message.svg" alt="">
-        <img src="./assist/images/downloadfile-19.png" alt="">
-        <h1>
-            <div style="direction: rtl;">
-                التمرين الأول :
+  <section class="level-section">
+    <img class="img1" src="./assest/images/background.jpg" alt="">
+
+
+    <section class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">
+          <pre>l   e   v   e   l   s</pre>
+        </h2>
+        <div class="levels text-center">
+
+          <div class="top floor1"></div>
+          <a href="./map1.html">
+            <div class="level1">
+              <p>level1</p>
+              <div class="cube">
+                <div class="top floor1"></div>
+                <div class="floor1">
+                  <span style="--i:0"></span>
+                  <span style="--i:1"></span>
+                  <span style="--i:2"></span>
+                  <span style="--i:3"></span>
+                </div>
+              </div>
             </div>
-            <br>
-            <div style="direction: rtl;">
-                اسحب وافلت بحيث تشكل الكود التالي :
+          </a>
+
+          <a href="./map2.html">
+            <div class="level2">
+              <p>level2</p>
+              <div class=" cube cube-level1 ">
+                <div class="top floor1"></div>
+                <div class="floor1">
+                  <span style="--i:0"></span>
+                  <span style="--i:1"></span>
+                  <span style="--i:2"></span>
+                  <span style="--i:3"></span>
+                </div>
+              </div>
+              <div class=" cube cube-level1 reverse">
+                <div class="top floor2"></div>
+                <div class="floor2">
+                  <span style="--i:0"></span>
+                  <span style="--i:1"></span>
+                  <span style="--i:2"></span>
+                  <span style="--i:3"></span>
+                </div>
+              </div>
             </div>
-            <br>
-            <code id="solve">print("أحمد" )</code>
-        </h1>
-        <div class="close">x</div>
-        <button class="start-btn">
-            ابدأ
-        </button>
-    </div>
+          </a>
 
-    <div class="next">
-        <img src="./assist/images/message.svg" alt="">
-        <img src="./assist/images/131f2c1c-0189-48f2-9b75-12a27d1a3af7-removebg-preview (1).png" alt="">
-        <h1>
-            <div style="direction: rtl; color: #e47f20;" class="text-center fs-1 ">
-            أحسنت يا بطل
+          <a href="./map3.html">
+            <div class="level3">
+              <p>level3</p>
+              <div class="cube">
+                <div class="top floor1"></div>
+                <div class="floor1">
+                  <span style="--i:0"></span>
+                  <span style="--i:1"></span>
+                  <span style="--i:2"></span>
+                  <span style="--i:3"></span>
+                </div>
+              </div>
+              <div class=" cube cube-level1 reverse">
+                <div class="top floor2"></div>
+                <div class="floor2">
+                  <span style="--i:0"></span>
+                  <span style="--i:1"></span>
+                  <span style="--i:2"></span>
+                  <span style="--i:3"></span>
+                </div>
+              </div>
+
+              <div class=" cube cube-level1 ">
+                <div class="top floor3"></div>
+                <div class="floor3">
+                  <span style="--i:0"></span>
+                  <span style="--i:1"></span>
+                  <span style="--i:2"></span>
+                  <span style="--i:3"></span>
+                </div>
+              </div>
             </div>
-        </h1>
-        <a href="./task2.html" class="start-btn">
-            التمرين التالي
-        </a>
-    </div>
-
-    <div class="error">
-        <img src="./assist/images/message.svg" alt="">
-        <img src="./assist/images/downloadfile-4-removebg-preview.png" alt="">
-        <h1>
-            <div style="direction: rtl" class="mb-3">
-                لقد أخطأت في الترتيب
-                <br>
-                حاول ترتيب الكود بالشكل :
-                <br>
-            </div>
-            <p> print ( " أحمد " )</p>
-
-            <div style="direction: rtl" class="mt-3">
-                أو استخدم زر المساعدة
-            </div>
-        </h1>
-        <button class="start-btn" id="complete">
-            أكمل
-        </button>
-    </div>
-
-    <div class="help">
-        <span>print</span>
-        <span>(</span>
-        <span>"</span>
-        <span>أحمد</span>
-        <span>" </span>
-        <span>)</span>
-    </div>
-
-<button class="hint hvr-float-shadow">مساعدة</button>
-    
-
-
-    <img class="img_background" src="./assist/images/photo_2023-03-16_10-21-48.jpg" alt="">
-    <div class="code">
-        <h5 style="direction: rtl">الكود</h5>
-        <code id="code">
-        <!-- print("Ahmad") -->
-        </code>
-        <hr>
-        <div class="value">
-            أحمد
+          </a>
         </div>
-    </div>
 
-    <div class="drag">
-        <div class="box dotted">
-            <p class="item" draggable="true">print</p>
-        </div>
-        <div class="box dotted">
-            <p class="item" draggable="true">(</p>
-        </div>
-        <div class="box dotted">
-            <p class="item" draggable="true">"</p>
-        </div>
-        <div class="box dotted">
-            <p class="item" draggable="true">أحمد</p>
-        </div>
-        <div class="box dotted">
-            <p class="item" draggable="true">" </p>
-        </div>
-        <div class="box dotted">
-            <p class="item" draggable="true">)</p>
-        </div>
-        
-    </div>
-    <br>
-    <div class="list">
-        <div class="box dotted"></div>
-        <div class="box dotted"></div>
-        <div class="box dotted"></div>
-        <div class="box dotted"></div>
-        <div class="box dotted"></div>
-        <div class="box dotted"></div>
-    </div>
 
-    <!-- <audio src="./assist/music/piglevelwin2mp3-14800.mp3" type="audio/mpeg" class="audio-success"></audio> -->
-    <!-- <audio src="./assist/music/firework-show-short-64657.mp3" type="audio/mpeg" class="audio-fire" loop></audio> -->
-    <!-- <audio src="./assist/music/wah-wah-sad-trombone-6347.mp3" type="audio/mpeg" class="audio-error"></audio> -->
+    </section>
 
-    <script src="./assist/script.js"></script>
-    <script src="./assist/DragDropTouch.js"></script>
-
+   
 </body>
 
 </html>
